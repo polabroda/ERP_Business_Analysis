@@ -6,8 +6,8 @@ flowchart TD
   B --> C[Dispatcher assigns technician via phone/email]
   C --> D[Technician performs service]
   D --> E[Technician sends paper notes / spreadsheet]
-  E --> F[Operations manually checks completion]
-  F --> G[Warehouse and labor records reconciled manually]
+  E --> F[Warehouse and labor records reconciled manually]
+  F --> G[Operations manually checks completion]
   G --> H[Finance receives billing email]
   H --> I[Finance re-enters information in accounting tool]
 ```
