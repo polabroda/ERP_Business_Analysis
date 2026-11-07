@@ -4,8 +4,10 @@
 flowchart TD
   A[Register customer/site work order] --> B[Unique work-order ID assigned]
   B --> C{Operations approves scope?}
-  C -- No --> D[Return for correction / cancel with reason]
-  D --> A
+  C -- No --> D{Revise or cancel?}
+  D -- Revise --> P[Correct existing order - retain ID]
+  P --> C
+  D -- Cancel --> Q[Cancelled - reason recorded]
   C -- Yes --> E[Dispatcher assigns technician/date]
   E --> F[Technician executes work]
   F --> G[Record labor, materials and evidence]
